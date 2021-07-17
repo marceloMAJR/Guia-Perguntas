@@ -23,7 +23,7 @@ app.use(express.json());
 
 //Rotas
 app.get("/",(req,res) => {
-    Pergunta.findALL({ raw: true }).then(perguntas => {
+    Pergunta.findAll({ raw: true }).then(perguntas => {
         res.render("index",{
             perguntas: perguntas
         });
